@@ -11,7 +11,7 @@ def main(argv):
     iterations = 30000000
     opcodes = ["mov %rdx, %rdx", "mov %rbx, %rbx"]
     try:
-        opts, args = getopt.getopt(argv,"hvi:")
+        opts, args = getopt.getopt(argv,"hvi:o:")
     except getopt.GetoptError:
         print sys.argv[0] + " -h, -v, -i"
         sys.exit(2)
@@ -24,6 +24,8 @@ def main(argv):
             sys.exit()
         elif opt == '-i':
             iterations = arg
+        elif opt == '-o':
+            opcodes = arg.split(';')
 
     print "int i = {0};".format(iterations)
     print("\n"
