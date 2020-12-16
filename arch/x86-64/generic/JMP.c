@@ -1,0 +1,62 @@
+int main()
+{
+    asm("movabs $0x7FFFFFFF, %rbx");
+    asm("start:");
+// Remove jmp instructions to establish baseline
+    asm("jmp a");
+    asm("a:");
+    asm("jmp b");
+    asm("b:");
+    asm("jmp c");
+    asm("c:");
+    asm("jmp d");
+    asm("d:");
+    asm("jmp e");
+    asm("e:");
+    asm("jmp f");
+    asm("f:");
+    asm("jmp g");
+    asm("g:");
+    asm("jmp h");
+    asm("h:");
+    asm("jmp i");
+    asm("i:");
+    asm("jmp j");
+    asm("j:");
+    asm("jmp k");
+    asm("k:");
+    asm("jmp l");
+    asm("l:");
+    asm("jmp m");
+    asm("m:");
+    asm("jmp n");
+    asm("n:");
+    asm("jmp o");
+    asm("o:");
+    asm("jmp p");
+    asm("p:");
+    asm("jmp q");
+    asm("q:");
+    asm("jmp r");
+    asm("r:");
+    asm("jmp s");
+    asm("s:");
+    asm("jmp t");
+    asm("t:");
+    asm("jmp u");
+    asm("u:");
+    asm("jmp v");
+    asm("v:");
+    asm("jmp w");
+    asm("w:");
+    asm("jmp x");
+    asm("x:");
+    asm("jmp y");
+    asm("y:");
+    asm("jmp z");
+    asm("z:");
+    asm("sub $1, %rbx");
+    asm("cmp $1, %rbx");
+    asm("jge start");
+}
+
