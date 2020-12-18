@@ -1,0 +1,63 @@
+int main()
+{
+    asm("movabs $0x7FFFFFFF, %rbx");
+    asm("cmp $1, %rbx");
+    asm("start:");
+// Remove jae instructions to establish baseline
+    asm("jae a");
+    asm("a:");
+    asm("jae b");
+    asm("b:");
+    asm("jae c");
+    asm("c:");
+    asm("jae d");
+    asm("d:");
+    asm("jae e");
+    asm("e:");
+    asm("jae f");
+    asm("f:");
+    asm("jae g");
+    asm("g:");
+    asm("jae h");
+    asm("h:");
+    asm("jae i");
+    asm("i:");
+    asm("jae j");
+    asm("j:");
+    asm("jae k");
+    asm("k:");
+    asm("jae l");
+    asm("l:");
+    asm("jae m");
+    asm("m:");
+    asm("jae n");
+    asm("n:");
+    asm("jae o");
+    asm("o:");
+    asm("jae p");
+    asm("p:");
+    asm("jae q");
+    asm("q:");
+    asm("jae r");
+    asm("r:");
+    asm("jae s");
+    asm("s:");
+    asm("jae t");
+    asm("t:");
+    asm("jae u");
+    asm("u:");
+    asm("jae v");
+    asm("v:");
+    asm("jae w");
+    asm("w:");
+    asm("jae x");
+    asm("x:");
+    asm("jae y");
+    asm("y:");
+    asm("jae z");
+    asm("z:");
+    asm("sub $1, %rbx");
+    asm("cmp $1, %rbx");
+    asm("jae start");
+}
+

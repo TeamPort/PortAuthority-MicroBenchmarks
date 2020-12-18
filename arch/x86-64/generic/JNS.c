@@ -1,0 +1,63 @@
+int main()
+{
+    asm("movabs $0x7FFFFFFF, %rbx");
+    asm("cmp $0, %rbx");
+    asm("start:");
+// Remove jns instructions to establish baseline
+    asm("jns a");
+    asm("a:");
+    asm("jns b");
+    asm("b:");
+    asm("jns c");
+    asm("c:");
+    asm("jns d");
+    asm("d:");
+    asm("jns e");
+    asm("e:");
+    asm("jns f");
+    asm("f:");
+    asm("jns g");
+    asm("g:");
+    asm("jns h");
+    asm("h:");
+    asm("jns i");
+    asm("i:");
+    asm("jns j");
+    asm("j:");
+    asm("jns k");
+    asm("k:");
+    asm("jns l");
+    asm("l:");
+    asm("jns m");
+    asm("m:");
+    asm("jns n");
+    asm("n:");
+    asm("jns o");
+    asm("o:");
+    asm("jns p");
+    asm("p:");
+    asm("jns q");
+    asm("q:");
+    asm("jns r");
+    asm("r:");
+    asm("jns s");
+    asm("s:");
+    asm("jns t");
+    asm("t:");
+    asm("jns u");
+    asm("u:");
+    asm("jns v");
+    asm("v:");
+    asm("jns w");
+    asm("w:");
+    asm("jns x");
+    asm("x:");
+    asm("jns y");
+    asm("y:");
+    asm("jns z");
+    asm("z:");
+    asm("sub $1, %rbx");
+    asm("cmp $0, %rbx");
+    asm("jns start");
+}
+
